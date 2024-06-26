@@ -12,19 +12,20 @@ using [socks4](https://www.openssh.com/txt/socks4.protocol) rfc protocol
 
 request packet format:
 
-                 +----+----+----+----+----+----+----+----+----+----+....+----+
-                 | VN | CD | DSTPORT |      DSTIP        | USERID       |NULL|
-                 +----+----+----+----+----+----+----+----+----+----+....+----+
- \# of bytes:	    1    1      2              4           variable        1
+     +----+----+----+----+----+----+----+----+----+----+....+----+
+     | VN | CD | DSTPORT |      DSTIP        | USERID       |NULL|
+     +----+----+----+----+----+----+----+----+----+----+....+----+
+       1    1      2              4           variable        1
+
    VN = protocol version # <4>
    CD = socks command code <1> for connect request
 
 response packet format:
 
-                +----+----+----+----+----+----+----+----+
-                | VN | CD | DSTPORT |      DSTIP        |
-                +----+----+----+----+----+----+----+----+
- \# of bytes:	   1    1      2              4
+    +----+----+----+----+----+----+----+----+
+    | VN | CD | DSTPORT |      DSTIP        |
+    +----+----+----+----+----+----+----+----+
+      1    1      2              4
 
 Network Byte Order:
     MSB most significant bits come first
