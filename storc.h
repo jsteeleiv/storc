@@ -4,7 +4,6 @@
 
 #include <arpa/inet.h>
 #include <assert.h>
-#include <cstdint>
 #include <netinet/in.h>
 #include <stdint.h>
 #include <stdio.h>
