@@ -23,7 +23,7 @@ response packet format:
       1    1      2              4
 
 Network Byte Order:
-    MSB most significant bits come first
+    MSB most significant bits come first?
 
 htons() reverses port
 inet_addr() reverses ip addr
@@ -50,3 +50,22 @@ struct in_addr {
 	in_addr_t s_addr;
 };
 ```
+
+## using EXIT macros
+
+The macros EXIT_SUCCESS and EXIT_FAILURE are defined in <stdlib.h> 
+to represent these standard return values.
+They are used with the exit function to terminate a program and return a status code.
+
+EXIT_SUCCESS is typically defined as 0.
+EXIT_FAILURE is typically defined as 1, although this can vary between systems.
+
+_Why Use These Macros?_
+Using EXIT_SUCCESS and EXIT_FAILURE instead of hardcoding numeric values (like 0 or 1) 
+makes your code more readable and portable. 
+It clearly indicates the intention of the exit status and ensures that your program adheres to 
+the conventions expected by other programmers and the system.
+
+
+
+
